@@ -1,0 +1,33 @@
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 20px 0px;
+}
+
+.main__section {
+  margin: 20px auto 0px auto;
+  max-width: 1360px;
+}
+
+.main__section-title {
+  margin: 0;
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+}
+
+.main__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: start;
+  margin-top: 20px;
+}
+
+@media (max-width: 1055px) {
+  .main__items {
+    justify-content: center;
+  }
+}
