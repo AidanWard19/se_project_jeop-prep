@@ -1,0 +1,33 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  gap: 50px;
+  width: 100%;
+  text-decoration: none;
+}
+
+.navigation__link {
+  text-decoration: none;
+  color: white;
+}
+
+.navigation__ddd {
+  font-family: "itckorinna", Arial, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: white;
+}
+
+.navigation__df {
+  font-family: "itckorinna", Arial, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+  text-decoration: none;
+}

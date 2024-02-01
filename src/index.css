@@ -24,3 +24,15 @@ code {
   font-weight: 700;
   font-style: bold;
 }
+@font-face {
+  font-family: "Gyparodyrg";
+  src: url("./fonts/gyparodyrg.ttf");
+}
+@font-face {
+  font-family: "Gyparodyhv";
+  src: url("./fonts/gyparodyhv.ttf");
+}
+@font-face {
+  font-family: "itckorinna";
+  src: url("./fonts/ITCkorinna.ttf");
+}

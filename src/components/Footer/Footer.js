@@ -1,12 +1,14 @@
 import "./Footer.css";
 
-const Footer = () => {
+function Footer() {
   return (
     <footer className="footer">
-      <div>Developed by Aidan Ward</div>
-      <div>2023</div>
+      <div className="footer__text">
+        <div>Developed by Aidan Ward</div>
+        <div>2024</div>
+      </div>
     </footer>
   );
-};
+}
 
 export default Footer;
