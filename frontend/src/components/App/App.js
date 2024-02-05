@@ -6,8 +6,13 @@ import Footer from "../Footer/Footer";
 import { Route, Routes } from "react-router-dom";
 import DailyDouble from "../DailyDouble/DailyDouble";
 import DailyFinal from "../DailyFinal/DailyFinal";
+import { getData } from "../../utils/cluebase";
 
 function App() {
+  // React.useEffect(() => {
+  //   getData().then((data) => console.log(data));
+  // }, []);
+
   return (
     <div className="page">
       <Header />
