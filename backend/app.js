@@ -10,7 +10,8 @@ app.use(
   "/",
   createProxyMiddleware({
     target: "http://cluebase.lukelav.in",
-    // changeOrigin: true,
+    changeOrigin: true,
+    followRedirects: true,
   })
 );
 

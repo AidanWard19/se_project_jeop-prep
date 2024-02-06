@@ -1,6 +1,6 @@
 {
   "name": "jeop-prep",
-  "homepage": "http://localhost:3000/se_project_jeop-prep",
+  "homepage": "https://jeopprep.csproject.org",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "npm run build && scp -r ./build/* award8192000@jeopprep.csproject.org:/home/award8192000/jeop-prep-frontend"
   },
   "eslintConfig": {
     "extends": [
