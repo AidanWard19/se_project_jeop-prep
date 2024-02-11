@@ -1,0 +1,19 @@
+.main {
+  color: white;
+}
+
+.main__section-title {
+  margin: 0;
+  font-family: "itckorinna", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  background-image: url("../../images/jeop-prep-questioncard.png");
+}
+
+@media (max-width: 1055px) {
+  .main__items {
+    justify-content: center;
+  }
+}
