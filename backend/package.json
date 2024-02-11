@@ -1,6 +1,6 @@
 {
   "name": "jeop-prep-backend",
-  "homepage": "http://localhost:3000/se_project_jeop-prep",
+  "homepage": "https://jeopprep.csproject.org",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
