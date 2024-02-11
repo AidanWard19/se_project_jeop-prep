@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e1a338b4.css",
-    "main.js": "/static/js/main.407933f7.js",
+    "main.css": "/static/css/main.35a8bcae.css",
+    "main.js": "/static/js/main.5df2fd07.js",
     "static/media/jeop-prep-questioncard.png": "/static/media/jeop-prep-questioncard.3c47e5da6da6bb53d8e3.png",
     "static/media/gyparodyhv.ttf": "/static/media/gyparodyhv.41f9494a07b7ecfa31bb.ttf",
     "static/media/gyparodyrg.ttf": "/static/media/gyparodyrg.ebea8ce8706e95608134.ttf",
@@ -9,11 +9,11 @@
     "static/media/CabinetGrotesk-Bold.otf": "/static/media/CabinetGrotesk-Bold.2619526040c3adf53b83.otf",
     "static/media/CabinetGrotesk-Medium.otf": "/static/media/CabinetGrotesk-Medium.b8b578586abc9d55dcda.otf",
     "index.html": "/index.html",
-    "main.e1a338b4.css.map": "/static/css/main.e1a338b4.css.map",
-    "main.407933f7.js.map": "/static/js/main.407933f7.js.map"
+    "main.35a8bcae.css.map": "/static/css/main.35a8bcae.css.map",
+    "main.5df2fd07.js.map": "/static/js/main.5df2fd07.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1a338b4.css",
-    "static/js/main.407933f7.js"
+    "static/css/main.35a8bcae.css",
+    "static/js/main.5df2fd07.js"
   ]
 }
