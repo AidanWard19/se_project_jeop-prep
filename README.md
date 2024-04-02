@@ -1,5 +1,5 @@
 # Deployed using GCP
-GO TO: jeopprep.csproject.org
+[The website](jeopprep.csproject.org)
 
 ![Capture](https://github.com/AidanWard19/se_project_jeop-prep/assets/135480405/e0399813-f2b6-4fb0-b614-bfe28e23a2c6)
 
