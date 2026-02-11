@@ -62,7 +62,7 @@ function Cards({ categoryText, answerText, responseText }) {
         )}
         {responseStatus === "correct" && (
           <div className="cards__caption">
-            <p className="cards__caption-text">{`CORRECT!`}</p>
+            <p className="cards__caption-text-correct">{`CORRECT!`}</p>
           </div>
         )}
         {responseStatus === "incorrect" && (

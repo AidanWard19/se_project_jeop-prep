@@ -43,7 +43,7 @@
 }
 
 .cards__answer-card-correct {
-  box-shadow: 0px 0px 120px 10px rgb(255, 150, 0);
+  box-shadow: 0px 0px 120px 10px #d0ff90;
 }
 
 .cards__answer-card-incorrect {
@@ -120,8 +120,16 @@
   font-family: Arial;
   font-size: 20px;
   font-weight: 700;
-  text-shadow: 1px 1px 12px rgb(0, 0, 125);
   color: white;
+}
+
+.cards__caption-text-correct {
+  margin: 0px;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 12px rgb(0, 0, 125);
 }
 
 .cards__caption-buttons-container {
