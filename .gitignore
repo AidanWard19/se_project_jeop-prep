@@ -10,6 +10,7 @@ node_modules
 
 # production build output — deployed via gh-pages, not committed to main
 frontend/build
+build
 
 # misc
 .DS_Store
@@ -24,5 +25,7 @@ yarn-error.log*
 
 # Source data file — 137MB, too large for GitHub
 frontend/public/jeopardy_pretty.json
+jeopardy_pretty.json
 
-# jeopardy_slim.json IS committed — the site needs it to function
+# Slim data — committed so the site works without running the generator
+# frontend/public/jeopardy_slim.json
