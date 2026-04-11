@@ -3,16 +3,16 @@ import "./DailyDouble.css";
 import Preloader from "../Preloader/Preloader";
 
 function DailyDouble({ data, isLoading }) {
-  console.log(isLoading);
   return !isLoading ? (
     <Cards
       categoryText={data.category}
       answerText={data.clue}
       responseText={data.response}
-      isLoading={isLoading}
+      value={data.value}
     />
   ) : (
     <Preloader />
   );
 }
+
 export default DailyDouble;

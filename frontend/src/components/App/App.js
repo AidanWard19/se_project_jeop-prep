@@ -6,14 +6,22 @@ import Footer from "../Footer/Footer";
 import { Route, Routes } from "react-router-dom";
 import DailyDouble from "../DailyDouble/DailyDouble";
 import DailyFinal from "../DailyFinal/DailyFinal";
+import DailyCategory from "../DailyCategory/DailyCategory";
 import { currentDate } from "../../utils/constants";
-import { fetchSelectedFinal, fetchSelectedDouble } from "../../utils/cluebase";
+import {
+  fetchSelectedFinal,
+  fetchSelectedDouble,
+  fetchDailyCategory,
+} from "../../utils/cluebase";
 
 function App() {
   const [dailyDouble, setDailyDouble] = React.useState({});
   const [dailyFinal, setDailyFinal] = React.useState({});
-  const [finalIsLoading, setFinalIsLoading] = React.useState(false);
+  const [dailyCategory, setDailyCategory] = React.useState({ category: "", clues: [] });
+
+  const [finalIsLoading, setFinalIsLoading] = React.useState(true);
   const [doubleIsLoading, setDoubleIsLoading] = React.useState(true);
+  const [categoryIsLoading, setCategoryIsLoading] = React.useState(true);
 
   const dateData = new Date().toLocaleString("default", {
     month: "numeric",
@@ -21,26 +29,32 @@ function App() {
   });
 
   React.useEffect(() => {
-    let dateSeed = dateData.split("/").join("");
-    console.log(dateSeed);
-    const seedFinalId = Math.floor(Math.abs(Math.sin(dateSeed)) * 300000);
-    const seedDoubleId = Math.floor(Math.abs(Math.cos(dateSeed)) * 300000);
+    // Produce three distinct seeds from today's date:
+    //   sin  → Final Jeopardy
+    //   cos  → Daily Double
+    //   tan  → Daily Category  (clamped so it doesn't blow up near asymptotes)
+    const dateSeed = dateData.split("/").join("");
+    const seedFinalId    = Math.floor(Math.abs(Math.sin(dateSeed)) * 300000);
+    const seedDoubleId   = Math.floor(Math.abs(Math.cos(dateSeed)) * 300000);
+    const seedCategoryId = Math.floor((Math.abs(Math.tan(dateSeed)) % 1) * 300000);
+
     setFinalIsLoading(true);
     fetchSelectedFinal(seedFinalId)
-      .then((data) => {
-        console.log(data);
-        setDailyFinal(data.data[0]);
-      })
+      .then((data) => setDailyFinal(data.data[0]))
       .catch((err) => console.error(err))
-      .finally(setFinalIsLoading(false));
+      .finally(() => setFinalIsLoading(false));
+
     setDoubleIsLoading(true);
     fetchSelectedDouble(seedDoubleId)
-      .then((data) => {
-        console.log(data);
-        setDailyDouble(data.data[0]);
-      })
+      .then((data) => setDailyDouble(data.data[0]))
       .catch((err) => console.error(err))
-      .finally(setDoubleIsLoading(false));
+      .finally(() => setDoubleIsLoading(false));
+
+    setCategoryIsLoading(true);
+    fetchDailyCategory(seedCategoryId)
+      .then((data) => setDailyCategory(data))
+      .catch((err) => console.error(err))
+      .finally(() => setCategoryIsLoading(false));
   }, [dateData]);
 
   return (
@@ -49,19 +63,24 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route
-          exact
           path="/ddd"
-          element={
-            <DailyDouble data={dailyDouble} isLoading={doubleIsLoading} />
-          }
+          element={<DailyDouble data={dailyDouble} isLoading={doubleIsLoading} />}
         />
         <Route
-          exact
           path="/df"
           element={<DailyFinal data={dailyFinal} isLoading={finalIsLoading} />}
         />
+        <Route
+          path="/dc"
+          element={
+            <DailyCategory
+              category={dailyCategory.category}
+              clues={dailyCategory.clues}
+              isLoading={categoryIsLoading}
+            />
+          }
+        />
       </Routes>
-
       <Footer />
     </div>
   );

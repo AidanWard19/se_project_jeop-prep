@@ -1,8 +1,9 @@
 .navigation {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0px;
-  gap: 50px;
+  gap: 30px 50px;
   width: 100%;
   text-decoration: none;
 }
@@ -12,17 +13,7 @@
   color: white;
 }
 
-.navigation__ddd {
-  font-family: "itckorinna", Arial, sans-serif;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.2;
-
-  color: white;
-}
-
-.navigation__df {
+.navigation__item {
   font-family: "itckorinna", Arial, sans-serif;
   font-size: 22px;
   font-style: normal;
@@ -30,4 +21,15 @@
   line-height: 1.2;
   color: white;
   text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.navigation__item:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 600px) {
+  .navigation__item {
+    font-size: 18px;
+  }
 }

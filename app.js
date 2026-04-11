@@ -1,18 +1,19 @@
-const express = require("express");
-const cors = require("cors");
-const { createProxyMiddleware } = require("http-proxy-middleware");
+/**
+ * app.js — DEPRECATED
+ *
+ * This backend server is no longer used. The app now reads questions
+ * directly from frontend/public/jeopardy_slim.json with no backend needed.
+ *
+ * To start the app, run:
+ *   cd frontend
+ *   npm start
+ */
 
-const app = express();
-app.use(cors());
-// app.use(express.json());
-
-app.use(
-  "/",
-  createProxyMiddleware({
-    target: "http://cluebase.lukelav.in",
-    changeOrigin: true,
-    followRedirects: true,
-  })
-);
-
-app.listen(3002);
+console.log("---------------------------------------------------");
+console.log("  ⚠️  This backend is no longer used.");
+console.log("");
+console.log("  To start Jeop Prep, run:");
+console.log("    cd frontend");
+console.log("    npm start");
+console.log("---------------------------------------------------");
+process.exit(0);
