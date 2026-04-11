@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/se_project_jeop-prep/static/css/main.07523176.css",
+    "main.js": "/se_project_jeop-prep/static/js/main.bd1a1577.js",
+    "static/media/jeop-prep-questioncard.png": "/se_project_jeop-prep/static/media/jeop-prep-questioncard.3c47e5da6da6bb53d8e3.png",
+    "static/media/gyparodyhv.ttf": "/se_project_jeop-prep/static/media/gyparodyhv.41f9494a07b7ecfa31bb.ttf",
+    "static/media/gyparodyrg.ttf": "/se_project_jeop-prep/static/media/gyparodyrg.ebea8ce8706e95608134.ttf",
+    "static/media/ITCkorinna.ttf": "/se_project_jeop-prep/static/media/ITCkorinna.95da6f77a1c14ee5aa12.ttf",
+    "static/media/CabinetGrotesk-Bold.otf": "/se_project_jeop-prep/static/media/CabinetGrotesk-Bold.2619526040c3adf53b83.otf",
+    "static/media/CabinetGrotesk-Medium.otf": "/se_project_jeop-prep/static/media/CabinetGrotesk-Medium.b8b578586abc9d55dcda.otf",
+    "index.html": "/se_project_jeop-prep/index.html",
+    "main.07523176.css.map": "/se_project_jeop-prep/static/css/main.07523176.css.map",
+    "main.bd1a1577.js.map": "/se_project_jeop-prep/static/js/main.bd1a1577.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07523176.css",
+    "static/js/main.bd1a1577.js"
+  ]
+}
