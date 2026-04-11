@@ -1,6 +1,6 @@
 {
   "name": "jeop-prep",
-  "homepage": "https://jeopprep.csproject.org",
+  "homepage": "https://AidanWard19.github.io/se_project_jeop-prep",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,13 +16,16 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm run build && scp -r ./build/* award8192000@jeopprep.csproject.org:/home/award8192000/jeop-prep-frontend"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
